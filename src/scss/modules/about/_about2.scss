@@ -1,0 +1,127 @@
+.about {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    @at-root &__rhombus {
+        @include size($width: 150px);
+        border: 5px solid #fdd28e;
+        // @include position($position: absolute, $top: 0, $right: 10%);
+        // transform: translateY(-75px) rotateZ(45deg);
+        z-index: -10;
+        margin-right: 2rem;
+    }
+    @at-root &__container {
+        max-width: 100%;
+        padding-bottom: 4rem;
+        // @include clearfix;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;
+    }
+    @at-root &__left {
+        width: 50%;
+        padding-left: 2rem;
+        // padding-right: 2rem;
+        float: left;
+        position: relative;
+        z-index: 1;
+    }
+    @at-root &__title {
+        color: $color-third;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        @at-root &--enter {
+            display: block;
+            font-size: 2.5rem;
+        }
+        @at-root &--yellow {
+            color: #fc9e20;
+        }
+        @at-root &::after {
+            content: '';        
+            display: block;
+            width: 50%;
+            height: 5px;
+            background: #fc9e20;
+            margin-top: .5rem;
+        }
+    }
+    @at-root &__text, &__text strong {
+        font-size: 1.2rem;
+    }
+
+    @at-root &__right {
+        float: left;
+        position: absolute;
+        top: 0;
+        right: -10%;
+        transform: translateY(-15px) rotate(45deg);
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    @at-root &__wrapper-img {
+        display: flex;
+        flex-flow: column nowrap;
+        transform: translateY(-40px);
+    }
+
+    @at-root &__img-together {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    @at-root &__img {
+        width: 128px;
+        height: 128px;
+        position: relative;
+        overflow: hidden;
+        opacity: .8;
+        margin-bottom: 2rem;
+        @at-root &::before {
+            content: '';
+            display: block;
+            @include size($width: 160%);
+            background: url("../img/about/1.jpeg");
+            background-size: cover;
+            background-position: center;
+            transform: rotateZ(-45deg);
+            position: absolute;
+            top: -30%;
+            left: -40%;
+            z-index: -15;
+        }
+        @at-root &--first/*, &--third*/ {
+            // transform: translateX(-45%) rotate(45deg);
+            // transform: translateX(55%) rotate(45deg);
+        }
+        @at-root &--second/*, &--fourth*/ {
+            // transform: translateX(15%) rotate(45deg);
+            // transform: translateX(-25%) translateY(-20%) rotate(45deg);
+            margin-right: 2rem;
+        }
+        @at-root &--third {
+            // transform: translateX(55%) translateY(-40%) rotate(45deg);
+        }
+        @at-root &--fourth {
+            // transform: translateX(-25%) translateY(-60%) rotate(45deg);
+        }
+        @at-root &--second::before {
+            background: url("../img/about/4.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        @at-root &--third::before {
+            background: url("../img/about/3.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        @at-root &--fourth::before {
+            background: url("../img/about/2.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

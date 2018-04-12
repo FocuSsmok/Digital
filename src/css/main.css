@@ -23,7 +23,7 @@ body a:hover {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -157,3 +157,138 @@ body a:hover {
 }
 
 /************END IMPORT HEADER************/
+/************IMPORT ABOUT****************/
+.about {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.about__rhombus {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #fdd28e;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75px) rotateZ(45deg);
+  z-index: -10;
+}
+
+.about__container {
+  max-width: 100%;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+
+.about__left {
+  margin-top: 5rem;
+  width: 50%;
+  padding-left: 2rem;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+.about__title {
+  color: #2f2f2f;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.about__title--enter {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.about__title--yellow {
+  color: #fc9e20;
+}
+
+.about__title::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 5px;
+  background: #fc9e20;
+  margin-top: .5rem;
+}
+
+.about__text, .about__text strong {
+  font-size: 1.2rem;
+}
+
+.about__right {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.about__img {
+  width: 128px;
+  height: 128px;
+  overflow: hidden;
+  opacity: .8;
+  margin-bottom: 0rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.about__img::before {
+  content: '';
+  display: block;
+  width: 160%;
+  height: 160%;
+  background: url("../img/about/1.jpeg");
+  background-size: cover;
+  background-position: center;
+  transform: rotateZ(-45deg);
+  position: absolute;
+  top: -30%;
+  left: -40%;
+  z-index: -15;
+}
+
+.about__img--first {
+  transform: translate(30%, calc(100% - 75px)) rotateZ(45deg);
+}
+
+.about__img--second {
+  transform: translate(-50%, calc(180% - 75px)) rotateZ(45deg);
+}
+
+.about__img--third {
+  transform: translate(30%, calc(260% - 75px)) rotateZ(45deg);
+}
+
+.about__img--fourth {
+  transform: translate(-50%, calc(340% - 75px)) rotateZ(45deg);
+}
+
+.about__img--second::before {
+  background: url("../img/about/4.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about__img--third::before {
+  background: url("../img/about/3.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about__img--fourth::before {
+  background: url("../img/about/2.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+/************END IMPORT ABOUT************/
