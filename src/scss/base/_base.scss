@@ -1,0 +1,61 @@
+$font-family-primary: 'Lato', sans-serif;
+// $font-family-secondary: 'Pacifico', cursive;
+$color-primary: #fba419;
+$color-secondary: #fff;
+$color-third: #2f2f2f;
+$breakpoints: (
+    sm: '(min-width: 576px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 992px)',
+    xl: '(min-width: 1200px)'
+);
+
+@mixin centerEl {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin linkStyle($color: #fff, $visited: lighten($color, 30)){
+    a {
+        color: $color;
+        text-decoration: none;
+        &:hover {
+            color: $visited; 
+        }
+    }
+}
+
+@mixin position($position: relative, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: $font-family-primary;
+}
+
+body {
+    @include linkStyle(#000000);
+}

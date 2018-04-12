@@ -1,0 +1,159 @@
+/************IMPORT BASE************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+body a {
+  color: #000000;
+  text-decoration: none;
+}
+
+body a:hover {
+  color: #4d4d4d;
+}
+
+/************END IMPORT BASE************/
+/************IMPORT HEADER************/
+.welcome {
+  background: url("../img/header/background1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.welcome__desc {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5rem;
+  width: 90%;
+  text-align: center;
+  color: #fff;
+}
+
+.welcome__title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+
+.welcome__text {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.button {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #fba419;
+  border: none;
+  padding: 1rem 1.4rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/************END IMPORT HEADER************/
+/************IMPORT NAV************/
+.nav {
+  display: none;
+}
+
+/************END IMPORT NAV************/
+/************IMPORT HEADER************/
+.header {
+  border: 5px solid #fba419;
+  height: 180px;
+  width: 180px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -90px) rotate(45deg);
+}
+
+.header__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg) translateY(37px);
+}
+
+.header__title {
+  margin-bottom: .8rem;
+}
+
+.header__title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: #989898;
+  margin: 0 auto;
+  margin-top: .5rem;
+}
+
+.header__title-link {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 800;
+}
+
+.header__dot {
+  background: none;
+  color: #fba419;
+  font-size: 3rem;
+}
+
+.social-media {
+  list-style-type: none;
+  position: relative;
+}
+
+.social-media__el {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-right: .3rem;
+  transition: all .3s ease-in;
+}
+
+.social-media__el:hover {
+  border-color: #fba419;
+}
+
+.social-media__el:hover .social-media__link {
+  color: #fba419;
+}
+
+.social-media__el:last-child {
+  margin-right: 0;
+}
+
+.social-media__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in;
+}
+
+/************END IMPORT HEADER************/
