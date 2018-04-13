@@ -1,0 +1,67 @@
+.choose {
+    background: $color-third;
+    @at-root &__container {
+        @extend %container;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+    }
+    @at-root &__desc {
+        margin: 0 4rem;
+    }
+    @at-root &__title {
+        @extend %title;
+        color: $color-secondary;
+        font-size: 2.5rem;
+        @at-root &--enter {
+            color: #fc9e20;
+            display: block;
+            font-size: 2.5rem;
+        }
+        @at-root &::after {
+            content: '';
+            display: block;
+            margin: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    @at-root &__advantage {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    @at-root &__icon {
+        width: 30%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        @at-root & img {
+            @include size(45px);
+        }
+    }
+    @at-root &__img {
+        margin-top: 4rem;
+        // min-height: 300px;
+        // max-height: 655px;
+        height: 40vh;
+        background: url('../img/choose/background.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.advantage {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: #777777;
+    @at-root &__title {
+        color: $color-secondary;
+        margin: 0 0 .5rem 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+    @at-root &__desc {
+        font-size: 1.2rem;
+    }
+}

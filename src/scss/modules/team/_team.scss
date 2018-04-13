@@ -1,7 +1,7 @@
 .team {
     background: $color-third;
     @at-root &__container {
-        padding: 5rem 2rem;
+        @extend %container;
     } 
     @at-root &__title {
         @extend %title;

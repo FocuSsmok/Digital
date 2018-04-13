@@ -12,6 +12,13 @@
         @at-root &--color {
             color: #fc9e20;
         }
+        @at-root &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            margin: 0;
+        }
     }
     @at-root &__text {
         font-size: 1.2rem;

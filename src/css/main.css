@@ -1,11 +1,11 @@
 /************IMPORT BASE************/
-.about__title, .team__title, .work__title {
+.about__title, .team__title, .work__title, .choose__title, .services__title {
   text-transform: uppercase;
   font-weight: 800;
   margin-bottom: 2rem;
 }
 
-.about__title::after, .team__title::after, .work__title::after {
+.about__title::after, .team__title::after, .work__title::after, .choose__title::after, .services__title::after {
   content: '';
   display: block;
   width: 70px;
@@ -14,7 +14,7 @@
   margin-top: .5rem;
 }
 
-.work__container {
+.team__container, .work__container, .choose__container, .services__container {
   padding: 5rem 4rem;
 }
 
@@ -302,10 +302,6 @@ body a:hover {
   background: #2f2f2f;
 }
 
-.team__container {
-  padding: 5rem 2rem;
-}
-
 .team__title {
   font-size: 2.5rem;
   width: 50%;
@@ -374,6 +370,14 @@ body a:hover {
   color: #fc9e20;
 }
 
+.work__title::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
 .work__text {
   font-size: 1.2rem;
 }
@@ -419,3 +423,168 @@ body a:hover {
 }
 
 /************END IMPORT WORK************/
+/************END IMPORT CHOOSE************/
+.choose {
+  background: #2f2f2f;
+}
+
+.choose__container {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+.choose__desc {
+  margin: 0 4rem;
+}
+
+.choose__title {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.choose__title--enter {
+  color: #fc9e20;
+  display: block;
+  font-size: 2.5rem;
+}
+
+.choose__title::after {
+  content: '';
+  display: block;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+.choose__advantage {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.choose__icon {
+  width: 30%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.choose__icon img {
+  width: 45px;
+  height: 45px;
+}
+
+.choose__img {
+  margin-top: 4rem;
+  height: 40vh;
+  background: url("../img/choose/background.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.advantage {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  color: #777777;
+}
+
+.advantage__title {
+  color: #fff;
+  margin: 0 0 .5rem 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.advantage__desc {
+  font-size: 1.2rem;
+}
+
+/************END IMPORT CHOOSE************/
+/************IMPORT SERVICES************/
+.services__container {
+  padding: 5rem 0 0 0;
+}
+
+.services__desc {
+  text-align: right;
+  padding: 0 4rem;
+}
+
+.services__title--color {
+  color: #fc9e20;
+}
+
+.services__title--enter {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.services__title::after {
+  content: '';
+  display: block;
+  margin: 0;
+  width: 0;
+  height: 0;
+}
+
+.services__text {
+  color: #040404;
+  font-size: 1.2rem;
+}
+
+.services__text--color {
+  color: #040404;
+  font-size: 1.2rem;
+}
+
+.services__right-side {
+  color: #fff;
+  margin-top: 5rem;
+  background: url("../img/services/1.jpeg");
+  background-position: center;
+  background-size: cover;
+  padding: 4rem;
+}
+
+.options {
+  background: #2f2f2f;
+  padding: 4rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.options__top, .options__bottom {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.options__top {
+  margin-bottom: 2rem;
+}
+
+.option {
+  width: 50%;
+  text-align: center;
+}
+
+.option:nth-child(1), .option:nth-child(3) {
+  margin-right: 1rem;
+}
+
+.option__icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option__icon i {
+  font-size: 2.5rem;
+}
+
+/************END IMPORT SERVICES************/
