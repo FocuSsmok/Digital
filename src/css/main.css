@@ -1,17 +1,21 @@
 /************IMPORT BASE************/
-.about__title, .team__title {
+.about__title, .team__title, .work__title {
   text-transform: uppercase;
   font-weight: 800;
   margin-bottom: 2rem;
 }
 
-.about__title::after, .team__title::after {
+.about__title::after, .team__title::after, .work__title::after {
   content: '';
   display: block;
   width: 70px;
   height: 5px;
   background: #fc9e20;
   margin-top: .5rem;
+}
+
+.work__container {
+  padding: 5rem 4rem;
 }
 
 * {
@@ -330,7 +334,7 @@ body a:hover {
 }
 
 .team__wrapper-img {
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
 .team__box-img {
@@ -356,3 +360,62 @@ body a:hover {
 }
 
 /************END IMPORT TEAM************/
+/************IMPORT WORK****************/
+.work__title {
+  width: 50%;
+}
+
+.work__title--enter {
+  font-size: 2.5rem;
+  display: block;
+}
+
+.work__title--color {
+  color: #fc9e20;
+}
+
+.work__text {
+  font-size: 1.2rem;
+}
+
+.work__btn-wrapper {
+  text-align: center;
+}
+
+.work__images {
+  margin-top: 4rem;
+}
+
+.work__img {
+  margin: 0 auto 2rem auto;
+  width: 280px;
+  height: 280px;
+  max-width: 100%;
+}
+
+.work__img--first {
+  background: url("../img/work/1.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.work__img--second {
+  background: url("../img/work/2.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.work__img--third {
+  background: url("../img/work/3.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.work__img--fourth {
+  background: url("../img/work/4.jpeg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+}
+
+/************END IMPORT WORK************/
