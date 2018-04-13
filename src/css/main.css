@@ -1,4 +1,19 @@
 /************IMPORT BASE************/
+.about__title, .team__title {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.about__title::after, .team__title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 5px;
+  background: #fc9e20;
+  margin-top: .5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -177,7 +192,6 @@ body a:hover {
 
 .about__container {
   max-width: 100%;
-  padding-bottom: 5rem;
   display: flex;
   flex-flow: row nowrap;
   overflow: hidden;
@@ -185,7 +199,8 @@ body a:hover {
 
 .about__left {
   margin-top: 5rem;
-  width: 50%;
+  margin-bottom: 5rem;
+  width: 45%;
   padding-left: 2rem;
   float: left;
   position: relative;
@@ -194,10 +209,6 @@ body a:hover {
 
 .about__title {
   color: #2f2f2f;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  margin-bottom: 2rem;
 }
 
 .about__title--enter {
@@ -209,26 +220,16 @@ body a:hover {
   color: #fc9e20;
 }
 
-.about__title::after {
-  content: '';
-  display: block;
-  width: 50%;
-  height: 5px;
-  background: #fc9e20;
-  margin-top: .5rem;
-}
-
 .about__text, .about__text strong {
   font-size: 1.2rem;
 }
 
 .about__right {
-  width: 50%;
+  width: 55%;
   position: relative;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-bottom: 5rem;
 }
 
 .about__img {
@@ -292,3 +293,66 @@ body a:hover {
 }
 
 /************END IMPORT ABOUT************/
+/************IMPORT TEAM****************/
+.team {
+  background: #2f2f2f;
+}
+
+.team__container {
+  padding: 5rem 2rem;
+}
+
+.team__title {
+  font-size: 2.5rem;
+  width: 50%;
+  color: #fff;
+}
+
+.team__title--enter {
+  display: block;
+  font-size: 2.5rem;
+  color: #fc9e20;
+}
+
+.team__text {
+  color: #a4a4a4;
+  font-size: 1.2rem;
+}
+
+.team__text--color {
+  color: #fff;
+  background: none;
+  font-size: 1.2rem;
+}
+
+.team__btn-wrapper {
+  text-align: center;
+}
+
+.team__wrapper-img {
+  margin-top: 2rem;
+}
+
+.team__box-img {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.team__box-img:last-child {
+  margin-bottom: 0;
+}
+
+.team__member {
+  color: #fc9e20;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: .5rem;
+}
+
+.team__role {
+  color: #a4a4a4;
+  font-size: 1.4rem;
+}
+
+/************END IMPORT TEAM************/

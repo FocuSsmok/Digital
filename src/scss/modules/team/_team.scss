@@ -1,0 +1,52 @@
+.team {
+    background: $color-third;
+    @at-root &__container {
+        padding: 5rem 2rem;
+    } 
+    @at-root &__title {
+        @extend %title;
+        font-size: 2.5rem;
+        width: 50%;
+        // margin: 0 auto 2.5rem auto;
+        color: $color-secondary;
+        @at-root &--enter {
+            display: block;
+            font-size: 2.5rem;
+            color: #fc9e20;
+        }
+    }
+    @at-root &__text {
+        color: #a4a4a4;
+        font-size: 1.2rem;
+        @at-root &--color {
+            color: $color-secondary;
+            background: none;
+            font-size: 1.2rem;
+        }
+    }
+    @at-root &__btn-wrapper {
+        text-align: center;
+    }
+    @at-root &__wrapper-img {
+        margin-top: 2rem;
+    }
+    @at-root &__box-img {
+        text-align: center;
+        margin-bottom: 2rem;
+        @at-root &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @at-root &__member {
+        color: #fc9e20;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: .5rem;
+    }
+    @at-root &__role {
+        color: #a4a4a4;
+        font-size: 1.4rem;
+    }
+}
+

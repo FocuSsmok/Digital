@@ -11,7 +11,7 @@
     }
     @at-root &__container {
         max-width: 100%;
-        padding-bottom: 5rem;
+        // padding-bottom: 5rem;
         // @include clearfix;
         display: flex;
         flex-flow: row nowrap;
@@ -19,7 +19,8 @@
     }
     @at-root &__left {
         margin-top: 5rem;
-        width: 50%;
+        margin-bottom: 5rem;
+        width: 45%;
         padding-left: 2rem;
         // padding-right: 2rem;
         float: left;
@@ -28,10 +29,7 @@
     }
     @at-root &__title {
         color: $color-third;
-        font-size: 2rem;
-        text-transform: uppercase;
-        font-weight: 800;
-        margin-bottom: 2rem;
+        @extend %title;
         @at-root &--enter {
             display: block;
             font-size: 2.5rem;
@@ -39,26 +37,17 @@
         @at-root &--yellow {
             color: #fc9e20;
         }
-        @at-root &::after {
-            content: '';        
-            display: block;
-            width: 50%;
-            height: 5px;
-            background: #fc9e20;
-            margin-top: .5rem;
-        }
     }
     @at-root &__text, &__text strong {
         font-size: 1.2rem;
     }
 
     @at-root &__right {
-        width: 50%;
+        width: 55%;
         position: relative;
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
-        margin-bottom: 5rem;
         // justify-content: center;
         // transform: translateY(-75px);
     }
