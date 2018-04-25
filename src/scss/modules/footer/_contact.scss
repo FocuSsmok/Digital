@@ -1,0 +1,56 @@
+.footer {
+    overflow: hidden;
+}
+.contact {
+    background: $color-third;
+    padding: 5rem 4rem 5rem 4rem;
+    color: $color-secondary;
+    overflow: hidden;
+    position: relative;
+    @at-root &__methods {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 100px;
+    }
+    @at-root &__box {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 2rem;
+    }
+    @at-root &__icon {
+        margin-right: 1rem;
+        @at-root & i {
+            color: $color-primary;
+            font-size: 2.2rem;
+        }
+    }
+    /*******LIST DL*****/
+    @at-root dl dd a {
+        color: $color-secondary;
+        font-size: 1.2rem;
+    }
+    @at-root dl dt {
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+    }
+    @at-root dl dd {
+        font-size: 1.2rem;
+    }
+    /*******END LIST DL*****/
+    @at-root &__triangle {
+        @include size(180px);
+        border: 5px solid #fba419;
+        margin: 0 auto;
+        transform: translate(-50%, 90px) rotate(45deg);
+        @include position($position: absolute, $left: 50%, $bottom: 0);
+        overflow: hidden;
+    }
+    @at-root &__text-rotate {
+        transform: rotate(-45deg) translate(-30% , 20px);
+        text-align: center;
+    }
+    @at-root &__copyright {
+        text-transform: uppercase;
+    }
+}

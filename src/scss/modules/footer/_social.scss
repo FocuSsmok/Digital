@@ -1,0 +1,44 @@
+.social {
+    background: url(../img/getintouch/background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 4rem;
+    color: $color-secondary;
+    @at-root &__title {
+        @extend %title;
+        text-align: center;
+        font-size: 2.5rem;
+        @at-root &::after {
+            content: '';
+            display: block;
+            margin: 0;
+            @include size(0);
+        }
+        @at-root &--color {
+            font-size: 2.5rem;
+            color: #fc9e20;
+        }
+    }
+    @at-root &__list {
+        list-style-type: none;
+        text-align: center;
+    }
+    @at-root &__top-list {
+        margin-bottom: 2rem;
+    }
+    @at-root &__item {
+        display: inline-block;
+        margin-right: 2rem;
+        @include size(5rem);
+        border: 2px solid $color-secondary;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 5rem;
+        @at-root &--last {
+            margin-right: 0;
+        }
+    }
+    @at-root &__icon {
+        font-size: 1.4rem;
+    }
+}

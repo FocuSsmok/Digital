@@ -1,0 +1,125 @@
+.client {
+    @include clearfix;
+    @at-root &__quotes {
+        background-color: $color-third;
+        @extend %container;
+        color: $color-secondary;
+    }
+    @at-root &__title {
+        @extend %title;
+        font-size: 2.5rem;
+        @at-root &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            margin: 0;
+        }
+        @at-root &--enter {
+            font-size: 2.5rem;
+            color: #fc9e20;
+            display: block;
+        }
+    }
+
+    @at-root &__quote {
+        display: flex;
+        font-family: 'Didact Gothic', sans-serif;
+        margin-bottom: 2rem;
+        @at-root &:last-child {
+            margin-bottom: 0;
+        }
+        // @at-root &::before {
+        //     content: "“";
+        //     display: table;
+        //     line-height: 0.8;
+        //     float: left;
+        //     font-size: 3rem;
+        //     vertical-align: text-top;
+        //     padding: 0;
+        //     margin: 0;
+        // }
+    }
+    @at-root &__icon {
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 6rem;
+        vertical-align: middle;
+        line-height: .8;
+    }
+    @at-root &__wrapper {
+        margin-left: .5rem;
+    }
+    @at-root &__text {
+        font-size: 1.2rem;
+        color: #929292;
+    }
+
+    @at-root &__author {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+        font-weight: bold;
+        font-style: normal;
+    }
+    @at-root &__img, &__slider {
+        float: left;
+        width: 50%;
+    }
+    @at-root &__img {
+        background: url("../img/client/1.jpeg");
+        height: 75vh;
+        background-size: cover;
+        background-position: center;
+    }
+    @at-root &__slider {
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 2rem;
+    }
+    @at-root &::after {
+        @include clearfix;
+    }
+}
+
+.slider {
+    @at-root &__container {
+        text-align: center;
+    }
+    @at-root &__icon {
+        // display: block;
+        // max-height: 60px;
+        line-height: .2;
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 7rem;
+        color: #e18e23;
+    }
+    @at-root &__text {
+        font-size: 1.2rem;
+        @at-root &--bold {
+            font-size: 1.2rem;
+        }
+    }
+    @at-root &__author {
+        font-style: normal;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+    @at-root &__list-dot {
+        margin-top: 4rem;
+        list-style-type: none;
+    }
+    @at-root &__dot {
+        display: inline-block;
+        @include size(10px);
+        background-color: #e18e23;
+        border-radius: 50%;
+        margin-right: .3rem;
+        @at-root &:last-child {
+            margin-right: 0;
+        }
+    }
+}
