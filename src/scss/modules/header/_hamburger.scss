@@ -1,0 +1,29 @@
+.hamburger {
+    background: transparent;
+    border: 0;
+    height: 28px;
+    width: 28px;
+    @include position($position: absolute, $left: 50%, $top: 150px);
+    transform: translate(-50%);
+    cursor: pointer;
+    @at-root &__line {
+        display: block;
+        height: 5px;
+        width: 28px;
+        background-color: $color-secondary;
+        position: absolute;
+        &:nth-child(1) {
+            left: 0;
+            top: 0;
+        }
+        &:nth-child(2) {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:nth-child(3) {
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
