@@ -67,6 +67,36 @@
         }
         @at-root &__img {
             @include size(240px);
+            margin-bottom: 5rem;
+            @at-root &:nth-child(3), &:nth-child(4) {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media #{map-get($breakpoints, md)} {
+    .work {
+        @at-root &__container {
+            padding-left: 8rem;
+        }
+        @at-root &__title {
+            @at-root &--color {
+                font-size: 3rem;
+            }
+            @at-root &--enter {
+                font-size: 3rem;
+            }
+        }
+        @at-root &__text {
+            font-size: 1.4rem;
+        }
+        @at-root &__img {
+            @include size(320px);
+            margin-bottom: 5rem;
+            @at-root &:nth-child(3), &:nth-child(4) {
+                margin-bottom: 0;
+            }
         }
     }
 }

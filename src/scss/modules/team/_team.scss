@@ -59,3 +59,23 @@
         }
     }
 }
+
+@media #{map-get($breakpoints, sm)} {
+    .team {
+        @at-root &__container {
+            padding-left: 8rem;
+        }
+        @at-root &__title {
+            font-size: 3rem;
+            @at-root &--enter {
+                font-size: 3rem;
+            }
+        }
+        @at-root &__text {
+            font-size: 1.4rem;
+            @at-root &--color {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

@@ -8,7 +8,8 @@
     @at-root &__desc {
         @include centerEl;
         margin-top: 5rem;
-        width: 90%;
+        width: 100%;
+        padding: 0 2rem;
         text-align: center;
         color: $color-secondary;
     }
@@ -36,4 +37,22 @@
     border-radius: 25px;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+@media #{map-get($breakpoints, md)} {
+    .welcome {
+        @at-root &__desc {
+            padding: 0 4rem;
+        }
+        @at-root &__title {
+            font-size: 5rem;
+        }
+        @at-root &__text {
+            font-size: 1.6rem;
+        }
+    }
+    .button {
+        font-size: 1.4rem;
+        letter-spacing: .1rem;
+    }
 }

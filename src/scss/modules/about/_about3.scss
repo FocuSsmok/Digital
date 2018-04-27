@@ -103,3 +103,39 @@
         }
     }
 }
+
+@media #{map-get($breakpoints, md)} {
+    .about {
+        @at-root &__left {
+            padding-left: 8rem;
+        }
+        @at-root &__title--enter {
+            font-size: 3rem;
+        }
+        @at-root &__text, & strong {
+            font-size: 1.4rem;
+        }
+        @at-root &__rhombus {
+            @include size($width: 250px);
+            border: 10px solid #fdd28e;
+            left: 0;
+            transform: translate(15%, -125px) rotateZ(45deg);
+        }
+        @at-root &__img {
+            @include position($position: absolute, $top: 0, $left: 0%);
+            @include size(200px);
+            @at-root &--first {
+                transform: translate(170%, calc(40% - 100px)) rotateZ(45deg);
+            }
+            @at-root &--second {
+                transform: translate(90%, calc(120% - 100px)) rotateZ(45deg);
+            }
+            @at-root &--third {
+                transform: translate(10%, calc(200% - 100px)) rotateZ(45deg);
+            }
+            @at-root &--fourth {
+                transform: translate(170%, calc(200% - 100px)) rotateZ(45deg);
+            }
+        }
+    }
+}

@@ -28,8 +28,27 @@
     }
     @at-root &__link {
         text-transform: uppercase;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         color: $color-secondary;
         font-weight: bold;
+    }
+}
+
+@media #{map-get($breakpoints, md)} {
+    .nav {
+        display: block;
+        background: transparent;
+        height: auto;
+        padding: 2rem 4rem 0 4rem; 
+        @at-root &__left, &__right {
+            margin: 0;
+            flex-flow: row nowrap;
+        }
+        @at-root &__el {
+            margin-right: 1rem;
+            @at-root &:last-child {
+                margin-right: 0;
+            }
+        }
     }
 }

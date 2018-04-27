@@ -123,3 +123,17 @@
         }
     }
 }
+
+@media #{map-get($breakpoints, md)} {
+    .client {
+        display: flex;
+        flex-flow: row nowrap;
+        @at-root &__box {
+            width: 33%;
+        }
+        @at-root &__quotes {
+            padding-left: 8rem;
+        }
+    }
+
+}

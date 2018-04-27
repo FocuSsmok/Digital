@@ -75,3 +75,13 @@
         }
     }
 }
+
+@media #{map-get($breakpoints, md)} {
+    .header {
+        @include size(240px);
+        transform: translate(-50%, -120px) rotate(45deg);
+        @at-root &__wrapper {
+            transform: rotate(-45deg) translateY(60px);
+        }
+    }  
+}

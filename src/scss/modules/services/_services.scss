@@ -84,3 +84,28 @@
         color: #929292;
     }
 }
+
+@media #{map-get($breakpoints, md)} {
+    .services {
+        @at-root &__container {
+            display: flex;
+            flex-flow: row nowrap;
+            padding-top: 0;
+        }
+        @at-root &__desc, &__right-side {
+            width: 50%;
+        }
+        @at-root &__desc {
+            padding: 5rem 8rem 5rem 8rem;
+        }
+        @at-root &__right-side {
+            margin-top: 0;
+            position: relative;
+        }
+    }
+    .options {
+        @include position($position: absolute, $top: 50%, $left: 50%);
+        transform: translate(-60%, -50%);
+        @include size(100%, 80%);
+    }
+}
