@@ -9,12 +9,12 @@ const imagemin = require("gulp-imagemin");
 gulp.task("serve", function(){
     bs.init({
         server: {
-            baseDir: "./src"
+            baseDir: "./"
         }
     });
 
     gulp.watch("./src/scss/**/*.scss", ["sass"]);
-    gulp.watch("./src/*.html").on('change', bs.reload);
+    gulp.watch("./*.html").on('change', bs.reload);
     gulp.watch("./src/js/*.js").on('change', bs.reload);
 });
 

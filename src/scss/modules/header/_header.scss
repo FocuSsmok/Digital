@@ -30,7 +30,7 @@
         }
     }
     @at-root &__title-link {
-        font-size: 2rem;
+        font-size: 2.5rem;
         color: $color-secondary;
         font-weight: 800;
     }
@@ -46,8 +46,8 @@
     position: relative;
     @at-root &__el {
         display: inline-block;
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
         border: 1px solid #fff;
         border-radius: 50%;
         margin-right: .3rem;
@@ -70,5 +70,8 @@
         align-items: center;
         justify-content: center;
         transition: all .3s ease-in;
+        @at-root & i {
+            font-size: 1.2rem;
+        }
     }
 }

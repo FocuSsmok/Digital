@@ -1,3 +1,35 @@
 .nav {
     display: none;
+    height: 200px;
+    background: $color-third;
+    @at-root &__list {
+        height: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between
+    }
+    @at-root &__left {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+    @at-root &__right {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-right: 2rem;
+    }
+    @at-root &__el {
+        margin-bottom: 1rem;
+        @at-root &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    @at-root &__link {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        color: $color-secondary;
+        font-weight: bold;
+    }
 }

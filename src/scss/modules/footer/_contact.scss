@@ -54,3 +54,21 @@
         text-transform: uppercase;
     }
 }
+
+@media #{map-get($breakpoints, sm)} {
+    .contact {
+        @at-root &__methods {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+        }
+        @at-root &__box {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

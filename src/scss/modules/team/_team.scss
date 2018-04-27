@@ -50,3 +50,12 @@
     }
 }
 
+@media #{map-get($breakpoints, sm)} {
+    .team {
+        @at-root &__wrapper-img {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+    }
+}

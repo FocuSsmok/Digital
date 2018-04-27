@@ -29,16 +29,51 @@
     @at-root &__item {
         display: inline-block;
         margin-right: 2rem;
-        @include size(5rem);
-        border: 2px solid $color-secondary;
-        border-radius: 50%;
+        @include size(4rem);
         text-align: center;
-        line-height: 5rem;
+        line-height: 4rem;
         @at-root &--last {
             margin-right: 0;
         }
+        @media all and (min-width: 360px){
+            @include size(5rem);
+            line-height: 5rem;
+        }
+    }
+    @at-root &__link {
+        display: block;
+        @include size(inherit);
+        border: 2px solid $color-secondary;
+        border-radius: 50%;
+        color: $color-secondary;
+        transition: all .3s ease-in-out;
+        @at-root &:hover {
+            border-color: $color-primary;
+            color: $color-primary;
+        }
+        
     }
     @at-root &__icon {
         font-size: 1.4rem;
+    }
+}
+
+@media #{map-get($breakpoints, sm)} {
+    .social {
+        @at-root &__title {
+            margin-bottom: 4rem;
+        }
+        @at-root &__list {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        @at-root &__top-wrapper {
+            margin-right: 2rem;
+        }
+        @at-root &__top-list, &__bottom-list {
+            margin-bottom: 0;
+        }
     }
 }
