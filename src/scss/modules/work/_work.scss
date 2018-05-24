@@ -68,7 +68,7 @@
         @at-root &__img {
             @include size(240px);
             margin-bottom: 5rem;
-            @at-root &:nth-child(3), &:nth-child(4) {
+            @at-root &:nth-child(4) {
                 margin-bottom: 0;
             }
         }
@@ -94,9 +94,9 @@
         @at-root &__img {
             @include size(320px);
             margin-bottom: 5rem;
-            @at-root &:nth-child(3), &:nth-child(4) {
-                margin-bottom: 0;
-            }
+            // @at-root &:nth-child(3), &:nth-child(4) {
+            //     // margin-bottom: 0;
+            // }
         }
     }
 }

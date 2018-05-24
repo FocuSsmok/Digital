@@ -3,7 +3,7 @@
     border: 0;
     height: 28px;
     width: 28px;
-    @include position($position: absolute, $left: 50%, $top: 150px);
+    @include position($position: absolute, $left: 34px, $top: 20px);
     transform: translate(-50%);
     cursor: pointer;
     @at-root &__line {
@@ -28,6 +28,12 @@
     }
 }
 
+/*@media only screen and #{map-get($breakpoints, xs)} and (max-width: 768px) and (orientation: landscape) {
+    .hamburger {
+        left: 34px;
+        top: 20px;
+    }
+} */
 @media #{map-get($breakpoints, md)} {
     .hamburger {
         display: none;

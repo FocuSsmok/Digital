@@ -39,6 +39,20 @@
     font-weight: bold;
 }
 
+@media only screen and #{map-get($breakpoints, xs)} and (max-width: 768px) and (orientation: landscape) {
+    .welcome {
+        @at-root &__desc {
+            margin-top: 6rem;
+        }
+        @at-root &__title {
+            font-size: 3.5rem;
+        }
+    }
+    .button {
+        margin-top: 2rem;
+    }
+}
+
 @media #{map-get($breakpoints, md)} {
     .welcome {
         @at-root &__desc {

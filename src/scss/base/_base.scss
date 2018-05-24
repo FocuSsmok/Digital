@@ -4,6 +4,7 @@ $color-primary: #fba419;
 $color-secondary: #fff;
 $color-third: #2f2f2f;
 $breakpoints: (
+    xs: '(min-width: 320px)',
     sm: '(min-width: 576px)',
     md: '(min-width: 768px)',
     lg: '(min-width: 992px)',
