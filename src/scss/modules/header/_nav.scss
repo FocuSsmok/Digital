@@ -52,3 +52,11 @@
         }
     }
 }
+
+@media #{map-get($breakpoints, lg)} {
+    .nav {
+        @at-root &__link {
+            font-size: 1.3rem;
+        }
+    }
+}

@@ -70,3 +70,17 @@
         letter-spacing: .1rem;
     }
 }
+
+@media #{map-get($breakpoints, lg)} {
+    .welcome {
+        @at-root &__title {
+            margin-bottom: 4rem;
+        }
+        @at-root &__text {
+            font-size: 2rem;
+        }
+    }
+    .button {
+        margin-top: 8rem;
+    }
+}

@@ -60,7 +60,7 @@
     }
 }
 
-@media #{map-get($breakpoints, sm)} {
+@media #{map-get($breakpoints, md)} {
     .team {
         @at-root &__container {
             padding-left: 8rem;
@@ -76,6 +76,19 @@
             @at-root &--color {
                 font-size: 1.4rem;
             }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .team {
+        @at-root &__wrapper-img {
+            flex-flow: column nowrap;
+        }
+        @at-root &__inner-wrapper {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
         }
     }
 }

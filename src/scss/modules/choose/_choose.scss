@@ -43,7 +43,7 @@
         margin-top: 4rem;
         // min-height: 300px;
         // max-height: 655px;
-        height: 40vh;
+        height: 50vh;
         background: url('../img/choose/background.jpeg');
         background-size: cover;
         background-position: center;
@@ -80,14 +80,14 @@
         @at-root &__container {
             display: flex;
             flex-flow: row-reverse nowrap;
-            padding: 5rem 8rem 5rem 0;
+            padding: 5rem 4rem 5rem 0;
         }
         @at-root &__box {
             width: 50%;
+            padding-left: 2rem;
         }
         @at-root &__img {
             margin-top: 0;
-            margin-right: 2rem;
             height: auto;
         }
     }

@@ -1,6 +1,7 @@
 .work {
     @at-root &__container {
         @extend %container;
+        padding-bottom: 0;
     }
     @at-root &__title {
         width: 50%;
@@ -29,30 +30,41 @@
     @at-root &__images {
         margin-top: 4rem;
     }
+    @at-root &__img-wrapper {
+        text-align: right;
+        @at-root &:nth-child(2), &:nth-child(4) {
+            text-align: left;
+        } 
+        @at-root &:nth-child(4) {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
     @at-root &__img {
-        margin: 0 auto 2rem auto;
-        width: 280px;
-        height: 280px;
-        max-width: 100%;
+        margin-bottom: 4rem;
         @at-root &--first {
-            background: url("../img/work/1.jpeg");
-            background-size: cover;
-            background-position: center;
+            max-width: 640px;
+            max-height: 428px;
+            width: 100%;
+            height: auto;
         }
         @at-root &--second {
-            background: url("../img/work/2.jpeg");
-            background-size: cover;
-            background-position: center;
+            max-width: 360px;
+            max-height: 270px;
+            width: 100%;
+            height: auto;
         }
         @at-root &--third {
-            background: url("../img/work/3.jpeg");
-            background-size: cover;
-            background-position: center;
+            max-width: 346px;
+            max-height: 350px;
+            width: 100%;
+            height: auto;
         }
         @at-root &--fourth {
-            background: url("../img/work/4.jpeg");
-            background-size: cover;
-            background-position: center;
+            max-width: 346px;
+            max-height: 481px;
+            width: 100%;
+            height: auto;
             margin-bottom: 0;
         }
     }
@@ -60,17 +72,27 @@
 
 @media #{map-get($breakpoints, sm)} {
     .work {
-        @at-root &__images {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-between;
+        @at-root &__container {
+            padding-bottom: 0;
         }
         @at-root &__img {
-            @include size(240px);
-            margin-bottom: 5rem;
-            @at-root &:nth-child(4) {
-                margin-bottom: 0;
+            @at-root &--second {
+                float: left;
+                margin-right: 2rem;
+                @include clearfix;
             }
+            @at-root &--second, &--third {
+                width: 45%;
+            }
+        }
+        @at-root &__img-wrapper:nth-child(1) {
+            text-align: center;
+        }
+        @at-root &__img-wrapper:nth-child(4) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
         }
     }
 }
@@ -79,6 +101,7 @@
     .work {
         @at-root &__container {
             padding-left: 8rem;
+            @include clearfix;
         }
         @at-root &__title {
             @at-root &--color {
@@ -91,12 +114,59 @@
         @at-root &__text {
             font-size: 1.4rem;
         }
+        @at-root &__images, &__desc {
+            max-width: 690px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @at-root &__img-wrapper {
+            @at-root &:nth-child(1) {
+                text-align: left;
+                width: 70%;
+                padding-right: 2rem;
+                float: left;
+                margin-bottom: 2rem;
+            }
+            @at-root &:nth-child(2) {
+                text-align: right;
+                width: 30%;
+                float: right;
+                @include clearfix;
+            }
+            @at-root &:nth-child(3) {
+                width: 50%;
+                float: left;
+                max-height: 100%;
+                display: flex;
+                justify-content: flex-end;
+            }
+            @at-root &:nth-child(4) {
+                justify-content: flex-end;
+                width: 50%;
+                float: right;
+            }
+        }
         @at-root &__img {
-            @include size(320px);
-            margin-bottom: 5rem;
-            // @at-root &:nth-child(3), &:nth-child(4) {
-            //     // margin-bottom: 0;
-            // }
+            @at-root &--first {
+                width: 100%;
+                margin: 0;
+            }
+            @at-root &--second {
+                float: none;
+                width: 100%;
+                margin: 0;
+            }
+            @at-root &--third {
+                width: 100%;
+                margin-bottom: 0;
+            }
+            @at-root &--fourth {
+                width: 100%;
+            }
         }
     }
+}
+
+@media #{map-get($breakpoints, md)} {
+
 }

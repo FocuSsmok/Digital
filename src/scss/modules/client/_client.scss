@@ -135,10 +135,10 @@
             padding-left: 8rem;
         }
         @at-root &__img {
-            height: 100vh;
+            height: initial;
         }
         @at-root &__slider {
-            height: 100vh;
+            height: initial;
         }
     }
 
