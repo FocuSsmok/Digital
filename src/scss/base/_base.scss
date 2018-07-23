@@ -78,3 +78,7 @@ $breakpoints: (
 body {
     @include linkStyle(#000000);
 }
+
+.text {
+    // font-size: 32px !important;
+}

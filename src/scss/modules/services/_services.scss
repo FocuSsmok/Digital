@@ -25,10 +25,10 @@
     }
     @at-root &__text {
         color: #040404;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         @at-root &--color {
             color: #040404;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
     }
     @at-root &__right-side {
@@ -80,7 +80,7 @@
         padding-bottom: .5rem;
     }
     @at-root &__text {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #929292;
     }
 }
@@ -99,9 +99,9 @@
             padding: 5rem 8rem 5rem 8rem;
         }
         @at-root &__text {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             @at-root &--color {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
             }
         }
         @at-root &__right-side {
@@ -120,6 +120,35 @@
         }
         @at-root &__text {
             font-size: 1.3rem;
+        }
+    }
+}
+
+@media #{map-get($breakpoints, lg)} {
+    .services {
+        @at-root &__desc {
+            padding: 7rem 8rem 8rem 12rem;
+            width: 40%;
+        }
+        @at-root &__right-side {
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            width: 60%;
+        }
+    }
+    .options {
+        @include size(95%, 80%);
+        display: flex;
+        justify-content: center;
+        transform: translate(-57%, -50%);
+        padding: 0 2rem;
+    }
+    .option {
+        @at-root &__title {
+            font-size: 1.8rem;
+        }
+        @at-root &__text {
+            font-size: 1.6rem;
         }
     }
 }

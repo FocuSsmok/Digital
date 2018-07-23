@@ -77,3 +77,10 @@
         }
     }
 }
+
+@media #{map-get($breakpoints, lg)} {
+    .social {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+}

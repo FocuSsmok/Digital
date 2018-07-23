@@ -85,3 +85,27 @@
         }
     }  
 }
+
+@media #{map-get($breakpoints, lg)} {
+    .header {
+        @include size(280px);
+        transform: translate(-50%, -140px) rotate(45deg);
+        @at-root &__title-link {
+            font-size: 3rem;
+        }
+        @at-root &__dot {
+            font-size: 3.4rem;
+        }
+        @at-root &__wrapper {
+            transform: rotate(-45deg) translateY(60px);
+        }
+    }
+    .social-media {
+        @at-root &__el {
+            @include size(32px);
+        }
+        @at-root &__link i {
+            font-size: 1.4rem;
+        }
+    }
+}

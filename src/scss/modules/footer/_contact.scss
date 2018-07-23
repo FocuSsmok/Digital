@@ -72,3 +72,12 @@
         }
     }
 }
+
+@media #{map-get($breakpoints, lg)} {
+    .contact {
+        padding-top: 8rem;
+        @at-root &__methods {
+            width: 80%;
+        }
+    }
+}

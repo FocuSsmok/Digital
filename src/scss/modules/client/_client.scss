@@ -50,7 +50,7 @@
         margin-left: .5rem;
     }
     @at-root &__text {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: #929292;
     }
 
@@ -96,9 +96,9 @@
         color: #e18e23;
     }
     @at-root &__text {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         @at-root &--bold {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
     }
     @at-root &__author {
@@ -141,5 +141,23 @@
             height: initial;
         }
     }
+}
 
+@media #{map-get($breakpoints, lg)} {
+    .client {
+        @at-root &__box {
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+        }
+    }
+}
+
+@media #{map-get($breakpoints, xl)} {
+    .client {
+        @at-root &__box {
+            height: 536px;
+            padding-top: 10rem;
+            padding-bottom: 10rem;
+        }
+    }
 }

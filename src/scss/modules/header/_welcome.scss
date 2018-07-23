@@ -74,10 +74,11 @@
 @media #{map-get($breakpoints, lg)} {
     .welcome {
         @at-root &__title {
+            font-size: 6rem;
             margin-bottom: 4rem;
         }
         @at-root &__text {
-            font-size: 2rem;
+            font-size: 2.4rem;
         }
     }
     .button {
