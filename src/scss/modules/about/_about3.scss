@@ -151,27 +151,25 @@
         @at-root &__text, &__strong {
             font-size: 1.8rem;
         }
-        @at-root &__rhombus {
+        &__img {
+            @include size(250px);
+            @include position($position: absolute, $top: 0, $left: 100%);
+            transform: translate(-75%, -15%) rotateZ(45deg);
+            &--second {
+                transform: translate(-152%, 62%) rotateZ(45deg);
+            }
+            &--third {
+                transform: translate(-229%, 139%) rotateZ(45deg);
+            }
+            &--fourth {
+                transform: translate(-75%, 139%) rotateZ(45deg);
+            }
+        }
+        &__rhombus {
             @include size($width: 280px);
             border: 10px solid #fdd28e;
-            left: 0;
-            transform: translate(15%, -140px) rotateZ(45deg);
-        }
-        @at-root &__img {
-            @include position($position: absolute, $top: 0, $left: 0%);
-            @include size(250px);
-            @at-root &--first {
-                transform: translate(150%, calc(40% - 100px)) rotateZ(45deg);
-            }
-            @at-root &--second {
-                transform: translate(70%, calc(120% - 100px)) rotateZ(45deg);
-            }
-            @at-root &--third {
-                transform: translate(-10%, calc(200% - 100px)) rotateZ(45deg);
-            }
-            @at-root &--fourth {
-                transform: translate(150%, calc(200% - 100px)) rotateZ(45deg);
-            }
+            left: 100%;
+            transform: translate(-187%, -140px) rotateZ(45deg);
         }
     }
 }
@@ -181,6 +179,26 @@
         @at-root &__left {
             margin-top: 10rem;
             margin-bottom: 10rem;
+        }
+        &__img {
+            @include size(300px);
+            @include position($position: absolute, $top: 0, $left: 100%);
+            transform: translate(-75%, -15%) rotateZ(45deg);
+            &--second {
+                transform: translate(-152%, 62%) rotateZ(45deg);
+            }
+            &--third {
+                transform: translate(-229%, 139%) rotateZ(45deg);
+            }
+            &--fourth {
+                transform: translate(-75%, 139%) rotateZ(45deg);
+            }
+        }
+        &__rhombus {
+            @include size($width: 280px);
+            border: 10px solid #fdd28e;
+            left: 100%;
+            transform: translate(-200%, -140px) rotateZ(45deg);
         }
     }
 }

@@ -154,10 +154,12 @@
 
 @media #{map-get($breakpoints, xl)} {
     .client {
+        min-height: 720px;
         @at-root &__box {
-            height: 536px;
-            padding-top: 10rem;
-            padding-bottom: 10rem;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
         }
     }
 }
